@@ -432,7 +432,7 @@
       if (kind !== "dom") {
         if (key.includes("-") && !(kind === "x-import" && (key.startsWith("aria-") || key.startsWith("data-"))))
           key = kebabToCamel(key);
-      } else {
+      } else {index
         if (key === "class") key = "className";
         else if (key === "for") key = "htmlFor";
         else if (key.startsWith("on"))
