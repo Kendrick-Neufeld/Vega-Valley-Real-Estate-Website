@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Vega Valley Real Estate — Lehigh Valley Homes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #FFFFFF; }
+    a { color: #D48B1E; }
+    a:hover { color: #0B1B3D; }
+  </style>
+  <script src="./image-slot.js"></script>
+</helmet>
+
+<div style="font-family:'Inter',sans-serif;color:#1F2937;">
+
+  <div style="background:#0B1B3D;color:#C9D2E4;padding:8px 40px;display:flex;justify-content:space-between;align-items:center;font-size:13px;">
+    <div style="display:flex;gap:24px;align-items:center;">
+      <span>{{ t.callUs }}</span>
+      <span style="color:#3E4E6B;">|</span>
+      <span>info@vegavalleyrealestate.com</span>
+    </div>
+    <div style="display:flex;gap:16px;align-items:center;">
+      <a href="#" style="color:#C9D2E4;text-decoration:none;font-weight:600;">Facebook</a>
+      <a href="#" style="color:#C9D2E4;text-decoration:none;font-weight:600;">Instagram</a>
+      <span style="color:#3E4E6B;">|</span>
+      <button onClick="{{ setLangEn }}" style="background:none;border:none;cursor:pointer;font-weight:700;font-size:13px;color:{{ enColor }};padding:2px;">EN</button>
+      <span style="color:#3E4E6B;">/</span>
+      <button onClick="{{ setLangEs }}" style="background:none;border:none;cursor:pointer;font-weight:700;font-size:13px;color:{{ esColor }};padding:2px;">ES</button>
+    </div>
+  </div>
+
+  <header style="position:sticky;top:0;z-index:50;background:#FFFFFF;box-shadow:0 1px 0 #E2E5EA;">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 40px;max-width:1320px;margin:0 auto;">
+      <a href="index.dc.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+        <img src="uploads/LOGO.jpg" alt="Vega Valley Real Estate" style="height:54px;width:54px;object-fit:contain;">
+        <div style="display:flex;flex-direction:column;line-height:1.1;">
+          <span style="font-family:'Playfair Display',serif;font-weight:700;font-size:19px;color:#0B1B3D;letter-spacing:0.5px;">VEGA VALLEY</span>
+          <span style="font-size:11px;letter-spacing:2.5px;color:#64748B;">{{ t.tagline }}</span>
+        </div>
+      </a>
+      <nav style="display:flex;gap:34px;align-items:center;">
+        <a href="index.dc.html" style="text-decoration:none;color:#0B1B3D;font-weight:700;font-size:15px;">{{ t.navHome }}</a>
+        <a href="properties.dc.html" style="text-decoration:none;color:#374151;font-weight:500;font-size:15px;">{{ t.navProperties }}</a>
+        <a href="about.dc.html" style="text-decoration:none;color:#374151;font-weight:500;font-size:15px;">{{ t.navAbout }}</a>
+        <a href="contact.dc.html" style="text-decoration:none;color:#374151;font-weight:500;font-size:15px;">{{ t.navContact }}</a>
+        <a href="contact.dc.html" style="background:#E89A24;color:#0B1B3D;text-decoration:none;font-weight:700;font-size:14px;padding:12px 22px;border-radius:6px;" style-hover="background:#D48B1E;">{{ t.navCta }}</a>
+      </nav>
+    </div>
+  </header>
+
+  <section style="position:relative;height:640px;overflow:hidden;">
+    <image-slot id="home-hero" shape="rect" fit="cover" placeholder="Hero photo: Bethlehem home exterior or Lehigh Valley scenery" style="position:absolute;inset:0;width:100%;height:100%;"></image-slot>
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(11,27,61,0.72) 0%, rgba(11,27,61,0.5) 45%, rgba(11,27,61,0.88) 100%);pointer-events:none;"></div>
+    <div style="position:relative;z-index:2;max-width:1320px;margin:0 auto;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 40px;">
+      <h1 style="font-family:'Playfair Display',serif;color:#FFFFFF;font-size:54px;line-height:1.18;max-width:720px;margin:0 0 22px;">{{ t.heroTitle }}</h1>
+      <p style="font-size:20px;color:#E7E9EE;max-width:560px;margin:0 0 34px;line-height:1.5;">{{ t.heroSub }}</p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <a href="properties.dc.html" style="background:#E89A24;color:#0B1B3D;padding:16px 30px;border-radius:6px;font-weight:700;text-decoration:none;font-size:15px;" style-hover="background:#D48B1E;">{{ t.heroBtn1 }}</a>
+        <a href="about.dc.html" style="border:2px solid #FFFFFF;color:#FFFFFF;padding:14px 28px;border-radius:6px;font-weight:600;text-decoration:none;font-size:15px;" style-hover="background:rgba(255,255,255,0.12);">{{ t.heroBtn2 }}</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:76px 40px 84px;max-width:1320px;margin:0 auto;">
+    <div style="text-align:center;max-width:640px;margin:0 auto 48px;">
+      <span style="color:#D48B1E;font-weight:700;letter-spacing:2px;font-size:13px;">{{ t.quickKicker }}</span>
+      <h2 style="font-family:'Playfair Display',serif;color:#0B1B3D;font-size:34px;margin:10px 0 0;">{{ t.quickTitle }}</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
+      <div style="background:#FFFFFF;border:1px solid #E2E5EA;border-radius:12px;padding:32px 26px;display:flex;flex-direction:column;gap:14px;box-shadow:0 2px 10px rgba(11,27,61,0.04);" style-hover="border-color:#E89A24;box-shadow:0 14px 28px rgba(11,27,61,0.1);transform:translateY(-4px);">
+        <div style="width:44px;height:44px;border-radius:8px;background:#0B1B3D;"></div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:19px;color:#0B1B3D;margin:0;">{{ t.card1Title }}</h3>
+        <p style="font-size:14px;color:#64748B;margin:0;line-height:1.5;flex:1;">{{ t.card1Desc }}</p>
+        <a href="#" style="color:#D48B1E;font-weight:700;font-size:14px;text-decoration:none;">{{ t.card1Link }} &rarr;</a>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E2E5EA;border-radius:12px;padding:32px 26px;display:flex;flex-direction:column;gap:14px;box-shadow:0 2px 10px rgba(11,27,61,0.04);" style-hover="border-color:#E89A24;box-shadow:0 14px 28px rgba(11,27,61,0.1);transform:translateY(-4px);">
+        <div style="width:44px;height:44px;border-radius:8px;background:#0B1B3D;"></div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:19px;color:#0B1B3D;margin:0;">{{ t.card2Title }}</h3>
+        <p style="font-size:14px;color:#64748B;margin:0;line-height:1.5;flex:1;">{{ t.card2Desc }}</p>
+        <a href="properties.dc.html" style="color:#D48B1E;font-weight:700;font-size:14px;text-decoration:none;">{{ t.card2Link }} &rarr;</a>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E2E5EA;border-radius:12px;padding:32px 26px;display:flex;flex-direction:column;gap:14px;box-shadow:0 2px 10px rgba(11,27,61,0.04);" style-hover="border-color:#E89A24;box-shadow:0 14px 28px rgba(11,27,61,0.1);transform:translateY(-4px);">
+        <div style="width:44px;height:44px;border-radius:8px;background:#0B1B3D;"></div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:19px;color:#0B1B3D;margin:0;">{{ t.card3Title }}</h3>
+        <p style="font-size:14px;color:#64748B;margin:0;line-height:1.5;flex:1;">{{ t.card3Desc }}</p>
+        <a href="about.dc.html" style="color:#D48B1E;font-weight:700;font-size:14px;text-decoration:none;">{{ t.card3Link }} &rarr;</a>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E2E5EA;border-radius:12px;padding:32px 26px;display:flex;flex-direction:column;gap:14px;box-shadow:0 2px 10px rgba(11,27,61,0.04);" style-hover="border-color:#E89A24;box-shadow:0 14px 28px rgba(11,27,61,0.1);transform:translateY(-4px);">
+        <div style="width:44px;height:44px;border-radius:8px;background:#0B1B3D;"></div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:19px;color:#0B1B3D;margin:0;">{{ t.card4Title }}</h3>
+        <p style="font-size:14px;color:#64748B;margin:0;line-height:1.5;flex:1;">{{ t.card4Desc }}</p>
+        <a href="contact.dc.html" style="color:#D48B1E;font-weight:700;font-size:14px;text-decoration:none;">{{ t.card4Link }} &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#FBF8F3;padding:88px 40px;">
+    <div style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center;">
+      <image-slot id="home-story-photo" shape="rounded" radius="16" fit="cover" placeholder="Founders portrait: husband & wife team" style="width:100%;height:460px;"></image-slot>
+      <div>
+        <span style="color:#D48B1E;font-weight:700;letter-spacing:2px;font-size:13px;">{{ t.storyKicker }}</span>
+        <h2 style="font-family:'Playfair Display',serif;color:#0B1B3D;font-size:32px;margin:10px 0 20px;line-height:1.25;">{{ t.storyTitle }}</h2>
+        <p style="font-size:16px;color:#4B5563;line-height:1.75;margin:0 0 28px;">{{ t.storyBody }}</p>
+        <a href="about.dc.html" style="color:#0B1B3D;font-weight:700;font-size:15px;text-decoration:none;border-bottom:2px solid #E89A24;padding-bottom:4px;">{{ t.storyLink }} &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:88px 40px;max-width:1320px;margin:0 auto;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px;flex-wrap:wrap;gap:20px;">
+      <div>
+        <span style="color:#D48B1E;font-weight:700;letter-spacing:2px;font-size:13px;">{{ t.featuredKicker }}</span>
+        <h2 style="font-family:'Playfair Display',serif;color:#0B1B3D;font-size:32px;margin:10px 0 0;">{{ t.featuredTitle }}</h2>
+      </div>
+      <a href="properties.dc.html" style="color:#0B1B3D;font-weight:700;font-size:15px;text-decoration:none;border-bottom:2px solid #E89A24;padding-bottom:4px;">{{ t.featuredLink }} &rarr;</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #E2E5EA;box-shadow:0 2px 10px rgba(11,27,61,0.04);">
+        <image-slot id="home-listing-1" shape="rect" fit="cover" placeholder="Listing photo: home exterior" style="width:100%;height:220px;"></image-slot>
+        <div style="padding:20px;">
+          <span style="display:inline-block;background:#0B1B3D;color:#E89A24;font-size:11px;font-weight:700;letter-spacing:1px;padding:5px 10px;border-radius:4px;margin-bottom:10px;">{{ t.tagPlaced }}</span>
+          <p style="margin:0;font-size:15px;color:#4B5563;">Bethlehem, PA</p>
+        </div>
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #E2E5EA;box-shadow:0 2px 10px rgba(11,27,61,0.04);">
+        <image-slot id="home-listing-2" shape="rect" fit="cover" placeholder="Listing photo: home interior" style="width:100%;height:220px;"></image-slot>
+        <div style="padding:20px;">
+          <span style="display:inline-block;background:#0B1B3D;color:#E89A24;font-size:11px;font-weight:700;letter-spacing:1px;padding:5px 10px;border-radius:4px;margin-bottom:10px;">{{ t.tagSoon }}</span>
+          <p style="margin:0;font-size:15px;color:#4B5563;">{{ t.areaLabel }}</p>
+        </div>
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #E2E5EA;box-shadow:0 2px 10px rgba(11,27,61,0.04);">
+        <image-slot id="home-listing-3" shape="rect" fit="cover" placeholder="Listing photo: home exterior" style="width:100%;height:220px;"></image-slot>
+        <div style="padding:20px;">
+          <span style="display:inline-block;background:#0B1B3D;color:#E89A24;font-size:11px;font-weight:700;letter-spacing:1px;padding:5px 10px;border-radius:4px;margin-bottom:10px;">{{ t.tagPlaced }}</span>
+          <p style="margin:0;font-size:15px;color:#4B5563;">Bethlehem, PA</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#0B1B3D;padding:64px 40px;text-align:center;">
+    <h2 style="font-family:'Playfair Display',serif;color:#FFFFFF;font-size:30px;margin:0 0 16px;">{{ t.ctaTitle }}</h2>
+    <p style="color:#C9D2E4;font-size:16px;margin:0 0 28px;">{{ t.ctaSub }}</p>
+    <a href="contact.dc.html" style="background:#E89A24;color:#0B1B3D;padding:16px 34px;border-radius:6px;font-weight:700;text-decoration:none;font-size:15px;" style-hover="background:#D48B1E;">{{ t.navCta }}</a>
+  </section>
+
+  <footer style="background:#162A45;color:#AAB6CC;padding:64px 40px 28px;">
+    <div style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;padding-bottom:40px;border-bottom:1px solid #2B3E5C;">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <img src="uploads/LOGO.jpg" alt="Vega Valley Real Estate" style="height:40px;width:40px;object-fit:contain;">
+          <span style="font-family:'Playfair Display',serif;color:#FFFFFF;font-size:17px;font-weight:700;">VEGA VALLEY</span>
+        </div>
+        <p style="font-size:14px;line-height:1.6;margin:0;max-width:280px;">{{ t.footerTagline }}</p>
+      </div>
+      <div>
+        <h4 style="color:#FFFFFF;font-size:14px;letter-spacing:1px;margin:0 0 16px;">{{ t.footerLinks }}</h4>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="index.dc.html" style="color:#AAB6CC;text-decoration:none;font-size:14px;">{{ t.navHome }}</a>
+          <a href="properties.dc.html" style="color:#AAB6CC;text-decoration:none;font-size:14px;">{{ t.navProperties }}</a>
+          <a href="about.dc.html" style="color:#AAB6CC;text-decoration:none;font-size:14px;">{{ t.navAbout }}</a>
+          <a href="contact.dc.html" style="color:#AAB6CC;text-decoration:none;font-size:14px;">{{ t.navContact }}</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="color:#FFFFFF;font-size:14px;letter-spacing:1px;margin:0 0 16px;">{{ t.footerContact }}</h4>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;">
+          <span>(610) 555-0142</span>
+          <span>info@vegavalleyrealestate.com</span>
+          <span>Bethlehem, PA 18018</span>
+        </div>
+      </div>
+      <div>
+        <h4 style="color:#FFFFFF;font-size:14px;letter-spacing:1px;margin:0 0 16px;">{{ t.footerFollow }}</h4>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="#" style="color:#AAB6CC;text-decoration:none;font-size:14px;">Facebook</a>
+          <a href="#" style="color:#AAB6CC;text-decoration:none;font-size:14px;">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1320px;margin:0 auto;padding-top:24px;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+      <span>{{ t.footerCopy }}</span>
+      <span>{{ t.footerLicense }}</span>
+    </div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const TRANSLATIONS = {
+  en: {
+    callUs: "Call (610) 555-0142",
+    tagline: "REAL ESTATE",
+    navHome: "Home", navProperties: "Properties", navAbout: "About Us", navContact: "Contact", navCta: "Get in Touch",
+    heroTitle: "Helping You Find a Place to Call Home in Lehigh Valley",
+    heroSub: "Local, family-owned real estate and property management built on trust and hard work.",
+    heroBtn1: "View Available Properties", heroBtn2: "Learn Our Story",
+    quickKicker: "QUICK ACCESS", quickTitle: "Everything You Need, In One Place",
+    card1Title: "Tenant Portal", card1Desc: "Pay rent online and manage your lease requests — fast, easy, and secure.", card1Link: "Login",
+    card2Title: "Available Properties", card2Desc: "Browse our current homes and rentals throughout the Lehigh Valley.", card2Link: "View",
+    card3Title: "Property Owners", card3Desc: "Personalized, transparent management for your rental investment.", card3Link: "Learn More",
+    card4Title: "Contact & Applications", card4Desc: "Reach out or submit a rental application in just a few minutes.", card4Link: "Get Started",
+    storyKicker: "OUR STORY", storyTitle: "A Family Journey Built on Trust",
+    storyBody: "Vega Valley Real Estate started with a husband and wife wanting to build something together while helping people in the Bethlehem, PA community they call home. For us, it's more than a business — it's a family journey built on trust, hard work, and helping others find a place to call home.",
+    storyLink: "Read Our Full Story",
+    featuredKicker: "FEATURED HOMES", featuredTitle: "Recently Placed & Available", featuredLink: "View All Properties",
+    tagPlaced: "RECENTLY PLACED", tagSoon: "AVAILABLE SOON", areaLabel: "Lehigh Valley Area",
+    ctaTitle: "Ready to Find Your Place in the Valley?", ctaSub: "Reach out today — we'd love to help.",
+    footerTagline: "Family-owned real estate and property management serving Bethlehem and the Lehigh Valley.",
+    footerLinks: "QUICK LINKS", footerContact: "CONTACT", footerFollow: "FOLLOW US",
+    footerCopy: "© 2026 Vega Valley Real Estate. All rights reserved.",
+    footerLicense: "Licensed Real Estate Broker — Commonwealth of Pennsylvania"
+  },
+  es: {
+    callUs: "Llame al (610) 555-0142",
+    tagline: "BIENES RAÍCES",
+    navHome: "Inicio", navProperties: "Propiedades", navAbout: "Nosotros", navContact: "Contacto", navCta: "Contáctenos",
+    heroTitle: "Ayudándole a Encontrar un Hogar en Lehigh Valley",
+    heroSub: "Bienes raíces y administración de propiedades familiar y local, basada en la confianza y el trabajo duro.",
+    heroBtn1: "Ver Propiedades Disponibles", heroBtn2: "Conozca Nuestra Historia",
+    quickKicker: "ACCESO RÁPIDO", quickTitle: "Todo lo que Necesita, en un Solo Lugar",
+    card1Title: "Portal del Inquilino", card1Desc: "Pague la renta en línea y administre sus solicitudes de arrendamiento — rápido, fácil y seguro.", card1Link: "Iniciar Sesión",
+    card2Title: "Propiedades Disponibles", card2Desc: "Explore nuestras casas y alquileres actuales en todo Lehigh Valley.", card2Link: "Ver",
+    card3Title: "Propietarios", card3Desc: "Administración personalizada y transparente para su inversión de alquiler.", card3Link: "Más Información",
+    card4Title: "Contacto y Solicitudes", card4Desc: "Comuníquese o envíe una solicitud de alquiler en solo minutos.", card4Link: "Comenzar",
+    storyKicker: "NUESTRA HISTORIA", storyTitle: "Un Viaje Familiar Basado en la Confianza",
+    storyBody: "Vega Valley Real Estate comenzó con un esposo y una esposa que querían construir algo juntos mientras ayudaban a las personas en la comunidad de Bethlehem, PA que llaman hogar. Para nosotros, es más que un negocio — es un viaje familiar basado en la confianza, el trabajo duro y ayudar a otros a encontrar un lugar para llamar hogar.",
+    storyLink: "Lea Nuestra Historia Completa",
+    featuredKicker: "CASAS DESTACADAS", featuredTitle: "Recién Colocadas y Disponibles", featuredLink: "Ver Todas las Propiedades",
+    tagPlaced: "RECIÉN COLOCADA", tagSoon: "DISPONIBLE PRONTO", areaLabel: "Área de Lehigh Valley",
+    ctaTitle: "¿Listo para Encontrar su Lugar en el Valle?", ctaSub: "Comuníquese hoy — nos encantaría ayudarle.",
+    footerTagline: "Bienes raíces y administración de propiedades familiar, sirviendo a Bethlehem y el Lehigh Valley.",
+    footerLinks: "ENLACES RÁPIDOS", footerContact: "CONTACTO", footerFollow: "SÍGANOS",
+    footerCopy: "© 2026 Vega Valley Real Estate. Todos los derechos reservados.",
+    footerLicense: "Corredor de Bienes Raíces Con Licencia — Commonwealth of Pennsylvania"
+  }
+};
+
+class Component extends DCLogic {
+  state = { lang: (typeof localStorage !== 'undefined' && localStorage.getItem('vv_lang')) || 'en' };
+  setLang(lang) {
+    this.setState({ lang });
+    try { localStorage.setItem('vv_lang', lang); } catch (e) {}
+  }
+  renderVals() {
+    const lang = this.state.lang;
+    return {
+      t: TRANSLATIONS[lang],
+      enColor: lang === 'en' ? '#E89A24' : '#C9D2E4',
+      esColor: lang === 'es' ? '#E89A24' : '#C9D2E4',
+      setLangEn: () => this.setLang('en'),
+      setLangEs: () => this.setLang('es')
+    };
+  }
+}
+
+</script>
+</body>
+</html>
